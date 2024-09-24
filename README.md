@@ -1,6 +1,7 @@
 # JSON Path Picker for Neovim
 
 JSON Path Picker is a Neovim plugin that allows users to easily navigate and copy content from specific paths in JSON files.
+![json-path](https://github.com/user-attachments/assets/5aa60547-1956-458e-9787-d66e93196ca7)
 
 ## Features
 
