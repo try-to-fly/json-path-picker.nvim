@@ -118,9 +118,10 @@ local json_obj = nil
 function M.pick_json_path()
 	local buf = vim.api.nvim_get_current_buf()
 	local filetype = vim.api.nvim_buf_get_option(buf, "filetype")
+	local filename = vim.api.nvim_buf_get_name(buf)
 
-	if filetype ~= "json" then
-		vim.api.nvim_err_writeln("Current buffer is not a JSON file")
+	if filetype ~= "json" and not string.match(filename, "%.json$") then
+		vim.api.nvim_err_writeln("Current buffer is not a JSON file: " .. filetype)
 		return
 	end
 
